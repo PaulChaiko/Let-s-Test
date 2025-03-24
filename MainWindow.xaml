@@ -1,0 +1,96 @@
+﻿<Window x:Class="Let_s_Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Let_s_Test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/Back.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column = "0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0"  Margin="5,5,5,5" FontSize="20" IsReadOnly="True" TextAlignment="Center" BorderBrush="#FF080808" IsEnabled="False" VerticalAlignment="Center" >РЕЗУЛЬТАТЫ</TextBox>
+            <TextBox Grid.Row="1" x:Name="Results"  Margin="5,5,5,5" BorderBrush="#FF080808" IsReadOnly="True" IsEnabled="False"/>
+        </Grid>
+
+        <Grid Grid.Column = "1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" x:Name="Logo" Source="/Images/Let's Test.jpg" />
+
+            <Grid Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox  Grid.Row="0" Grid.Column="0" Margin="5,5,5,5" FontSize="20" IsReadOnly="True" TextAlignment="Center" BorderBrush="White" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" >ЛОГИН</TextBox>
+                <TextBox  Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" FontSize="20" IsReadOnly="True" TextAlignment="Center" BorderBrush="White" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" >ПАРОЛЬ</TextBox>
+                <TextBox Name="LoginBox" Grid.Row="0" Grid.Column="1" Margin="5,15,10,15" FontSize="14"  ></TextBox>
+                <TextBox Name="PassBox" Grid.Row="1" Grid.Column="1" Margin="5,15,10,15" FontSize="14"></TextBox>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0" Name="RegB" Margin="50,5,50,5">РЕГИСТРАЦИЯ</Button>
+                <Button Grid.Row="1" Name="AutB" Margin="50,5,50,5">АВТОРИЗАЦИЯ</Button>
+                <Button Grid.Row="2" Name="StartB" Margin="50,5,50,5">НАЧАТЬ</Button>
+                <Button Grid.Row="3" Name="AddB" Margin="50,5,50,5">ДОБАВИТЬ ТЕСТ</Button>
+
+            </Grid>
+
+
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0" Margin="5,5,5,5" FontSize="20" IsReadOnly="True" TextAlignment="Center" BorderBrush="#FF080808" IsEnabled="False" VerticalAlignment="Center" >ТЕСТЫ</TextBox>
+            <TextBox Grid.Row="2" Margin="5,5,5,5" FontSize="20" IsReadOnly="True" TextAlignment="Center" BorderBrush="#FF080808" IsEnabled="False" VerticalAlignment="Center" >ВЫБРАНО</TextBox>
+            <ListBox Grid.Row="1" Margin="5,5,5,5" x:Name="TestList" SelectionMode="Single" ></ListBox>
+            <ListBox Grid.Row="3" Margin="5,5,5,5" x:Name="ChosenTest" SelectionMode="Single" ></ListBox>
+
+
+        </Grid>
+
+    </Grid>
+</Window>
